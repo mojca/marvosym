@@ -1,0 +1,5 @@
+%1 = $TEXMF$fonts/afm/public/marvosym/
+%2 = $TEXMF$fonts/type1/public/marvosym/
+
+@MarVoSym = fmvr8x %2,1,b="marvosym",a
+

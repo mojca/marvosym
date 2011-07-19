@@ -1,0 +1,559 @@
+\documentclass[12pt,a4paper,normalheadings]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[latin1jk]{inputenc}
+\usepackage{times,marvosym,url,thumbpdf}
+\usepackage{hyperref}
+\hypersetup{pdfauthor={Thomas Henlich}}
+\hypersetup{pdfsubject={LaTeX package documentation}}
+\hypersetup{pdftitle={The MarVoSym Font Package}}
+\begin{document}
+\renewcommand\arraystretch{1.4}
+\newcommand\leg[1]{{\tiny\tt\char92#1}}
+\newcommand\sho[1]{{\large #1}}
+%\def\email{\hyper@normalise\email@}
+%\def\email@#1{\hyper@linkurl{\begingroup \Url{#1}}{#1}}
+\newcommand\email{\begingroup \urlstyle{tt}\Url}
+\title{The MarVoSym F{\LARGE\Football}nt Package}
+\author{Thomas Henlich (thomas@henlich.de)}
+\maketitle
+\begin{abstract}
+  This document describes how to use the \emph{Martin Vogel's Symbols} font
+  in your \LaTeX\ documents. The font is a PS font, so you need a PS printer
+  or \path{ghostscript}. Alternatively, you can use \path{pdflatex} to
+  produce a PDF file. The font provides the ``official'' Euro currency
+  symbol, Euro symbols which go well with the Times / Helvetica / Courier
+  fonts, warning and safety-related symbols, astronomy symbols, zodiac signs
+  and many others.
+\end{abstract}
+
+\section{Installation}
+Note: If the MarVoSym package came as part of your \TeX{} distribution, you can skip this step.\\
+In the following, replace \path{$TEXMF} with your actual texmf directory, e.\,g.
+\texttt{/usr/share/texmf}.
+
+\begin{itemize}
+\item Copy \path{marvosym.pfb} into a directory where dvips can find it, e.\,g.
+  \path{$TEXMF/fonts/type1/public/marvosym/}.
+\item Copy \path{umvs.tfm} into a directory where \TeX{} will find it, e.\,g.
+  \path{$TEXMF/fonts/tfm/public/marvosym/}.
+\item Copy \path{marvosym.map} into a directory where dvips (and pdflatex, if you want to use that as well) will find it,
+  e.\,g. \path{$TEXMF/dvips/marvosym/}.
+\item Copy \path{marvosym.sty} and \path{umvs.fd} to a \TeX{} input directory, e.\,g.
+\path{$TEXMF/tex/latex/marvosym/}.
+\item Optionally copy \path{marvosym.afm} into an afm-directory,  e.\,g.
+  \path{$TEXMF/fonts/afm/public/marvosym/} (\TeX{} doesn't need this file.)
+\end{itemize}
+
+\section{Usage}
+
+In your document's preamble, type \verb+\usepackage{marvosym}+. To insert a
+symbol, use a macro as described in the next section. The symbol will appear
+in the currently selected font size. To get a bigger symbol, use a
+size-changing command like \\
+\path{{\small \Smiley}{\Large \Smiley}{\LARGE \Smiley}}:
+{\small \Smiley}{\Large \Smiley}{\LARGE \Smiley}
+
+
+\section{Available symbols}
+
+\subsection{Communication}
+
+\begin{tabular}{|*{10}{c}|} \hline
+\leg{Pickup} & \leg{Letter} & 
+\leg{Mobilefone} & \leg{Telefon} &
+\leg{fax} & \leg{FAX} & \leg{Faxmachine} &
+\leg{Email} &\leg{Lightning} & \leg{Emailct} \\
+\sho{\Pickup} & \sho{\Letter} &
+\sho{\Mobilefone} & \sho{\Telefon} &
+\sho{\fax} & \sho{\FAX} & \sho{\Faxmachine} &
+\sho{\Email} & \sho{\Lightning} & \sho{\Emailct} \\ \hline
+\end{tabular}
+
+
+\subsection{Engineering}
+
+\begin{tabular}{|*{8}{c}|} \hline
+\leg{Beam} &
+\leg{Bearing} &
+\leg{Loosebearing} &
+\leg{Fixedbearing} &
+\leg{Lefttorque} &
+\leg{Righttorque} &
+\leg{Lineload} &
+\leg{Force} \\
+\sho{\Beam} &
+\sho{\Bearing} &
+\sho{\Loosebearing} &
+\sho{\Fixedbearing} &
+\sho{\Lefttorque} &
+\sho{\Righttorque} &
+\sho{\Lineload} &
+\sho{\Force} \\
+\hline
+\leg{Octosteel} &
+\leg{Hexasteel} &
+\leg{Squaresteel} & 
+\leg{Rectsteel} &
+\leg{Circsteel} &
+\leg{Flatsteel} &
+\leg{Squarepipe} &
+\leg{Rectpipe} \\
+\sho{\Octosteel} &
+\sho{\Hexasteel} &
+\sho{\Squaresteel} &
+\sho{\Rectsteel} &
+\sho{\Circsteel} &
+\sho{\Flatsteel} &
+\sho{\Squarepipe} &
+\sho{\Rectpipe} \\
+\hline
+\leg{Lsteel} &
+\leg{TTsteel} &
+\leg{Circpipe} &
+\leg{Tsteel} &
+\leg{RoundedTsteel} &
+\leg{RoundedTTsteel} &
+\leg{RoundedLsteel} & \\
+\sho{\Lsteel} &
+\sho{\TTsteel} &
+\sho{\Circpipe} &
+\sho{\Tsteel} &
+\sho{\RoundedTsteel} &
+\sho{\RoundedTTsteel} &
+\sho{\RoundedLsteel} & \\
+\hline
+\end{tabular}
+
+\subsection{Information}
+
+\begin{tabular}{|*{8}{c}|} \hline
+\leg{Industry} &
+\leg{Coffeecup} &
+\leg{Rightscissors} &
+\leg{Kutline} &
+\leg{Leftscissors} &
+\leg{Football} &
+\leg{Bicycle} & \\
+\sho{\Industry} &
+\sho{\Coffeecup} &
+\sho{\Rightscissors} &
+\sho{\Kutline} &
+\sho{\Leftscissors} &
+\sho{\Football} &
+\sho{\Bicycle} & \\
+\hline
+\leg{Info} &
+\leg{Clocklogo} &
+\leg{Cutright} &
+\leg{Cutline} &
+\leg{Cutleft} &
+\leg{Wheelchair} &
+\leg{Gentsroom} &
+\leg{Ladiesroom} \\
+\sho{\Info} &
+\sho{\Clocklogo} &
+\sho{\Cutright} &
+\sho{\Cutline} &
+\sho{\Cutleft} &
+\sho{\Wheelchair} &
+\sho{\Gentsroom} &
+\sho{\Ladiesroom} \\
+\hline
+\leg{Checkedbox} &
+\leg{Crossedbox} &
+\leg{Pointinghand} &
+\leg{Writinghand} &&&& \\
+\sho{\Checkedbox} &
+\sho{\Crossedbox} &
+\sho{\Pointinghand} &
+\sho{\Writinghand} &&&& \\
+\hline
+\end{tabular}
+
+\subsection{Laundry}
+
+\begin{tabular}{|*{8}{c}|} \hline
+\leg{WashCotton} &
+\leg{WashSynthetics} &
+\leg{WashWool} &
+\leg{Handwash} &
+\leg{Dontwash} &
+\leg{Tumbler} &
+\leg{NoTumbler} &
+\leg{NoChemicalCleaning} \\
+\sho{\WashCotton} &
+\sho{\WashSynthetics} &
+\sho{\WashWool} &
+\sho{\Handwash} &
+\sho{\Dontwash} &
+\sho{\Tumbler} &
+\sho{\NoTumbler} &
+\sho{\NoChemicalCleaning} \\
+\hline
+\leg{Bleech} &
+\leg{NoBleech} &
+\leg{CleaningA} &
+\leg{CleaningP} &
+\leg{CleaningPP} &
+\leg{CleaningF} &
+\leg{CleaningFF} & \\
+\sho{\Bleech} &
+\sho{\NoBleech} &
+\sho{\CleaningA} &
+\sho{\CleaningP} &
+\sho{\CleaningPP} &
+\sho{\CleaningF} &
+\sho{\CleaningFF} & \\
+\hline
+\leg{IroningI} &
+\leg{IroningII} &
+\leg{IroningIII} &
+\leg{NoIroning} &
+\leg{AtNinetyFive} &
+\leg{ShortNinetyFive} &
+\leg{AtSixty} &
+\leg{ShortSixty} \\
+\sho{\IroningI} &
+\sho{\IroningII} &
+\sho{\IroningIII} &
+\sho{\NoIroning} &
+\sho{\AtNinetyFive} &
+\sho{\ShortNinetyFive} &
+\sho{\AtSixty} &
+\sho{\ShortSixty} \\
+\hline
+\leg{ShortFifty} &
+\leg{AtForty} &
+\leg{ShortForty} &
+\leg{SpecialForty} &
+\leg{ShortThirty} &&& \\
+\sho{\ShortFifty} &
+\sho{\AtForty} &
+\sho{\ShortForty} &
+\sho{\SpecialForty} &
+\sho{\ShortThirty} &&& \\
+\hline
+\end{tabular}
+
+\subsection{Currency}
+
+\begin{tabular}{|*{10}{c}|} \hline
+\leg{EUR} &
+\leg{EURdig} &
+\leg{EURhv} &
+\leg{EURcr} &
+\leg{EURtm} &
+\leg{Ecommerce} &
+\leg{Shilling} &
+\leg{Denarius} &
+\leg{Pfund} &
+\leg{EyesDollar} \\
+ &
+ &
+ &
+ &
+ &
+ &
+ &
+\leg{Deleatur} &
+ &
+ \\
+\sho{\EUR} &
+\sho{\EURdig} &
+\sho{\EURhv} &
+\sho{\EURcr} &
+\sho{\EURtm} &
+\sho{\Ecommerce} &
+\sho{\Shilling} &
+\sho{\Deleatur} &
+\sho{\Pfund} &
+\sho{\EyesDollar} \\
+\hline
+\end{tabular}
+
+\begin{itemize}
+\item Hey, \verb+\Ecommerce+ is not really a currency symbol, you might say. But it has
+something to do with money, so there you go{\ldots}
+\item The \verb+\Denarius+ symbol is also known as the correction sign
+``Deleatur''.
+\item \verb+\EUR+ is the normal (natural) width Euro symbol.
+  \verb+\EURdig+ has ``special'' metrics, so it has the same width as
+  the digits (of this font). (To line up properly in tables etc.)
+\end{itemize}
+
+
+\subsection{Safety}
+
+\begin{tabular}{|*{8}{c}|} \hline
+\leg{Stopsign} &
+\leg{CEsign} &
+\leg{Estatically} &
+\leg{Explosionsafe} &
+\leg{Laserbeam} &
+\leg{Biohazard} &
+\leg{Radioactivity} &
+\leg{BSEfree} \\
+\sho{\Stopsign} &
+\sho{\CEsign} &
+\sho{\Estatically} &
+\sho{\Explosionsafe} &
+\sho{\Laserbeam} &
+\sho{\Biohazard} &
+\sho{\Radioactivity} &
+\sho{\BSEfree} \\
+\hline
+\end{tabular}
+
+\subsection{Navigation}
+
+\begin{tabular}{|*{10}{c}|} \hline
+\leg{RewindToIndex} &
+\leg{RewindToStart} &
+\leg{Rewind} &
+\leg{Forward} &
+\leg{ForwardToEnd} &
+\leg{ForwardToIndex} &
+\leg{MoveUp} &
+\leg{MoveDown} &
+\leg{ToTop} &
+\leg{ToBottom} \\
+\sho{\RewindToIndex} &
+\sho{\RewindToStart} &
+\sho{\Rewind} &
+\sho{\Forward} &
+\sho{\ForwardToEnd} &
+\sho{\ForwardToIndex} &
+\sho{\MoveUp} &
+\sho{\MoveDown} &
+\sho{\ToTop} &
+\sho{\ToBottom} \\
+\hline
+\end{tabular}
+
+\subsection{Computers}
+
+\begin{tabular}{|*{6}{c}|} \hline
+\leg{ComputerMouse} &
+\leg{SerialInterface} &
+\leg{Keyboard} &
+\leg{SerialPort} &
+\leg{ParallelPort} &
+\leg{Printer} \\
+\sho{\ComputerMouse} &
+\sho{\SerialInterface} &
+\sho{\Keyboard} &
+\sho{\SerialPort} &
+\sho{\ParallelPort} &
+\sho{\Printer} \\
+\hline
+\end{tabular}
+
+\subsection{Maths}
+
+\begin{tabular}{|*{10}{c}|} \hline
+\leg{MVZero} &
+\leg{MVOne} &
+\leg{MVTwo} &
+\leg{MVThree} &
+\leg{MVFour} &
+\leg{MVFive} &
+\leg{MVSix} &
+\leg{MVSeven} &
+\leg{MVEight} &
+\leg{MVNine} \\
+\sho{\MVZero} &
+\sho{\MVOne} &
+\sho{\MVTwo} &
+\sho{\MVThree} &
+\sho{\MVFour} &
+\sho{\MVFive} &
+\sho{\MVSix} &
+\sho{\MVSeven} &
+\sho{\MVEight} &
+\sho{\MVNine} \\
+\hline
+\leg{Corresponds} &
+\leg{Vectorarrowhigh} &
+\leg{Anglesign} &
+\leg{Vectorarrow} &
+\leg{Squaredot} &&&&&\\
+\sho{\Corresponds} &
+\sho{\Vectorarrowhigh} &
+\sho{\Anglesign} &
+\sho{\Vectorarrow} &
+\sho{\Squaredot} &&&&&\\
+\hline
+\end{tabular}
+
+\subsection{Biology}
+
+\begin{tabular}{|*{10}{c}|} \hline
+\leg{Neutral} &
+\leg{Male} &
+\leg{Hermaphrodite} &
+\leg{Female} &
+\leg{MALE} &
+\leg{HERMAPHRODITE} &
+\leg{FEMALE} &
+\leg{MaleMale} &
+\leg{FemaleFemale} &
+\leg{FemaleMale} \\
+\sho{\Neutral} &
+\sho{\Male} &
+\sho{\Hermaphrodite} &
+\sho{\Female} &
+\sho{\MALE} &
+\sho{\HERMAPHRODITE} &
+\sho{\FEMALE} &
+\sho{\MaleMale} &
+\sho{\FemaleFemale} &
+\sho{\FemaleMale} \\
+\hline
+\end{tabular}
+
+\subsection{Astronomy}
+
+\begin{tabular}{|*{11}{c}|} \hline
+\leg{Sun} &
+\leg{Moon} &
+\leg{Mercury} &
+\leg{Venus} &
+\leg{Mars} &
+\leg{Jupiter} &
+\leg{Saturn} &
+\leg{Uranus} &
+\leg{Neptune} &
+\leg{Pluto} &
+\leg{Earth} \\
+\sho{\Sun} &
+\sho{\Moon} &
+\sho{\Mercury} &
+\sho{\Venus} &
+\sho{\Mars} &
+\sho{\Jupiter} &
+\sho{\Saturn} &
+\sho{\Uranus} &
+\sho{\Neptune} &
+\sho{\Pluto} &
+\sho{\Earth} \\
+\hline
+\end{tabular}
+
+\subsection{Astrology}
+
+%\Zodiac#1
+
+\begin{tabular}{|*{12}{c}|} \hline
+\leg{Aries} &
+\leg{Taurus} &
+\leg{Gemini} &
+\leg{Cancer} &
+\leg{Leo} &
+\leg{Virgo} &
+\leg{Libra} &
+\leg{Scorpio} &
+\leg{Sagittarius} &
+\leg{Capricorn} &
+\leg{Aquarius} &
+\leg{Pisces} \\
+\sho{\Aries} &
+\sho{\Taurus} &
+\sho{\Gemini} &
+\sho{\Cancer} &
+\sho{\Leo} &
+\sho{\Virgo} &
+\sho{\Libra} &
+\sho{\Scorpio} &
+\sho{\Sagittarius} &
+\sho{\Capricorn} &
+\sho{\Aquarius} &
+\sho{\Pisces} \\
+\hline
+\end{tabular}
+
+\subsection{Others}
+
+\begin{tabular}{|*{10}{c}|} \hline
+\leg{Yinyang} &
+\leg{MVRightarrow} &
+\leg{MVAt} &
+\leg{FHBOlogo} &
+\leg{FHBOLOGO} &
+\leg{FullFHBO} &
+\leg{Mundus} &
+\leg{Cross} &
+\leg{Celtcross} &
+\leg{Ankh} \\
+\sho{\Yinyang} &
+\sho{\MVRightarrow} &
+\sho{\MVAt} &
+\sho{\FHBOlogo} &
+\sho{\FHBOLOGO} &
+\sho{\FullFHBO} &
+\sho{\Mundus} &
+\sho{\Cross} &
+\sho{\Celtcross} &
+\sho{\Ankh} \\
+\hline
+\leg{Heart} &
+\leg{CircledA} &
+\leg{Bouquet} &
+\leg{Frowny} &
+\leg{Smiley} &
+\leg{Bat} &
+\leg{Womanface} &
+\leg{MartinVogel} && \\
+\sho{\Heart} &
+\sho{\CircledA} &
+\sho{\Bouquet} &
+\sho{\Frowny} &
+\sho{\Smiley} &
+\sho{\Bat} &
+\sho{\Womanface} &
+\sho{\MartinVogel} && \\
+\hline
+\end{tabular}
+
+
+\section{Authors}
+
+The font was designed by Martin Vogel. See
+\url{http://www.marvosym.de/}.
+
+The macros and this documentation were written by Thomas Henlich,
+who also converted the font to a Type 1 font. The latter involved running
+\path{ttf2pt1} and doing some manual fixes afterwards.
+
+\section{History}
+\begin{sloppypar}
+\begin{labeling}{9999-99-99}
+\item[2006-05-11] Version 2.1: Renamed Rightarrow macro to MVRightarrow. New TeX name for font (umvs). Rewrote style file. Added fd file.
+\item[2000-04-21] Updated the font and documentation. Changed /FontName to
+MarVoSym. Many new glyphs.
+Removed:
+\path{\Kross}, \path{\Snowflake}, \path{\Circles},
+\path{\Womanside}, \path{\Manside}, \path{\Womanfront}, \path{\Manfront}.
+\item[1998-07-20] Changed (*) to /* in /FontName. Thanks to Denis B. Roegel
+  for telling me about this.
+\item[1998-06-21] Conversion to type 1 font now done with ttf2pt1 program.
+  Font works now with dvips 5.78 and partial font downloading. Thanks to Uwe
+  W. Gehring and Armin Geisse for cooperation. Added \verb+\Ankh+ macro.
+  Renamed some macros.
+\item[1998-06-10] First version.
+\end{labeling}
+\end{sloppypar}
+
+
+\section{Software}
+\path{ttf2pt1}, the TrueType to PS type 1 font converter, is free software. See
+\url{http://ttf2pt1.sourceforge.net/} for more information. 
+
+
+\end{document}
+
+%%% Local Varibles: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+

@@ -1,0 +1,59 @@
+============================================================
+
+             Installing the Marvosym Type1 font
+               with VTeX/Free 7.00 and above
+               
+============================================================
+                                                  2000-09-10
+                                              Walter Schmidt
+                               <walter.schmidt@arcormail.de>
+
+
+The below instructions refer to version 2 of the Marvosym
+Type1 font as of 2000-05-01.
+
+The directory name "texmf" refers to
+
+    /usr/local/vtex/texmf  (with VTeX/Lnx)
+or  
+    <drive>:\texmf         (with VTeX/2)
+  
+
+(1)
+Copy the Type1 font file file marvosym.pfb to the directory
+
+    texmf/fonts/type1/public/marvosym
+  
+(2)
+Copy the Type1 font metrics file marvosym.afm to
+
+    texmf/fonts/afm/public/marvosym
+  
+(3)
+Copy the TeX font metrics file fmvr8x.tfm to 
+
+    texmf/fonts/tfm/public/marvosym/
+  
+(4)
+Copy the font map file marvosym.ali to 
+
+    texmf/vtex/config
+    
+(5)
+Add an entry for the above font map to the section TYPE1 of
+the configuration files pdf.fm and ps.fm, which reside in
+the directory texmf/vtex/config :
+
+    TYPE1 {
+      ...
+      marvosym.ali
+      }
+  
+(6)
+Copy the style file marvosym.sty to a TeX input directory,
+e.g.
+    texmf/tex/latex/misc
+
+
+== finis
+
