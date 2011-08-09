@@ -13,23 +13,50 @@ The font contains
 and many others.
 
 File list:
-README.1st      overview of what this package is
-umvs.tfm        TeX font metric file for the marvosym font
-umvs.fd         Font description file for the marvosym font
-marvodoc.pdf    The documentation for the marvosym package (PDF)
-marvodoc.ps     The documentation for the marvosym package (PS)
-marvodoc.tex    The source of the documentation
-marvosym.afm    Type 1 font metric file for the marvosym font
-marvosym.pfb    Type 1 font
-marvosym.sty    The marvosym style file for LaTeX2e
-PROBLEMS	describes some problems and their solutions
-LICENSE         License for this package
 
-IMPORTANT:
-Download files in BINARY mode!
+doc/
+	fonts/marvosym/
+		README                 Overview of what this package is
+
+		LICENSE                License for this package
+		marvodoc.tex           The source of the documentation
+		marvodoc.pdf           The documentation for the marvosym package
+		PROBLEMS               Describes some problems and their solutions
+		readme.original.txt    Readme from original font
+
+fonts/
+	afm/
+		public/marvosym/
+			marvosym.afm    Type 1 font metric file for the marvosym font
+	map/
+		dvips/marvosym/
+			marvosym.map    Map file for pdftex, dvips, ...
+		vtex/marvosym/
+			marvosym.ali    Map file for VTEX
+	tfm/
+		public/marvosym/
+			umvs.tfm        TeX font metric file for the marvosym font
+	truetype/
+		public/marvosym/
+			marvosym.ttf    Original TrueType font
+	type1/
+		public/marvosym/
+			marvosym.pfb    Type 1 font
+
+source/
+	fonts/marvosym/
+		generate_marvosym_type1.sh    A shell script to generate afm, pfb and tfm files from ttf
+
+tex/
+	latex/marvosym/
+		marvosym.sty    The marvosym style file for LaTeX2e
+		umvs.fd         Font description file for the marvosym font
+		
+
 
 Font design: Martin Vogel
-Macros and documentation: Thomas Henlich
+Macros and documentation: Thomas Henlich (original package)
+                          Mojca Miklavec (updates; current maintainer)
 
 marvosym is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

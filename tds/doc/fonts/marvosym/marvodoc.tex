@@ -4,7 +4,7 @@
 \usepackage[latin1jk]{inputenc}
 \usepackage{times,marvosym,url,thumbpdf}
 \usepackage{hyperref}
-\hypersetup{pdfauthor={Thomas Henlich}}
+\hypersetup{pdfauthor={Thomas Henlich,Mojca Miklavec}}
 \hypersetup{pdfsubject={LaTeX package documentation}}
 \hypersetup{pdftitle={The MarVoSym Font Package}}
 \begin{document}
@@ -15,39 +15,37 @@
 %\def\email@#1{\hyper@linkurl{\begingroup \Url{#1}}{#1}}
 \newcommand\email{\begingroup \urlstyle{tt}\Url}
 \title{The MarVoSym F{\LARGE\Football}nt Package}
-\author{Thomas Henlich (thomas@henlich.de)}
+\author{Thomas Henlich\\
+Mojca Miklavec (mojca.miklavec.lists@gmail.com)}
 \maketitle
 \begin{abstract}
   This document describes how to use the \emph{Martin Vogel's Symbols} font
-  in your \LaTeX\ documents. The font is a PS font, so you need a PS printer
-  or \path{ghostscript}. Alternatively, you can use \path{pdflatex} to
-  produce a PDF file. The font provides the ``official'' Euro currency
+  in your \LaTeX\ documents. The package uses version 3.10 of MarVoSym font
+  (last updated on September 1, 2008) and provides both TrueType and Type 1
+  versions. The font provides the ``official'' Euro currency
   symbol, Euro symbols which go well with the Times / Helvetica / Courier
   fonts, warning and safety-related symbols, astronomy symbols, zodiac signs
   and many others.
 \end{abstract}
 
 \section{Installation}
-Note: If the MarVoSym package came as part of your \TeX{} distribution, you can skip this step.\\
-In the following, replace \path{$TEXMF} with your actual texmf directory, e.\,g.
-\texttt{/usr/share/texmf}.
 
-\begin{itemize}
-\item Copy \path{marvosym.pfb} into a directory where dvips can find it, e.\,g.
-  \path{$TEXMF/fonts/type1/public/marvosym/}.
-\item Copy \path{umvs.tfm} into a directory where \TeX{} will find it, e.\,g.
-  \path{$TEXMF/fonts/tfm/public/marvosym/}.
-\item Copy \path{marvosym.map} into a directory where dvips (and pdflatex, if you want to use that as well) will find it,
-  e.\,g. \path{$TEXMF/dvips/marvosym/}.
-\item Copy \path{marvosym.sty} and \path{umvs.fd} to a \TeX{} input directory, e.\,g.
-\path{$TEXMF/tex/latex/marvosym/}.
-\item Optionally copy \path{marvosym.afm} into an afm-directory,  e.\,g.
-  \path{$TEXMF/fonts/afm/public/marvosym/} (\TeX{} doesn't need this file.)
-\end{itemize}
+These days, it is most likely that you already have MarVoSym as part of
+your \TeX\ distribution, such as \TeX\ Live or MiK\TeX.  You can find
+out by trying to use the font (see next section).  If you don't have it,
+you can probably get it through the relevant package manager
+(\url{http://tug.org/texlive/pkginstall.html}).
+
+If you do need to install it manually, the steps to follow are described
+at \url{http://tug.org/fonts/fontinstall.html}.
+You can download it from CTAN (\url{http://ctan.org/pkg/marvosym}), and
+the MarVoSym package there is ``TDS-arranged'', in the terminology of
+that web page.
+
 
 \section{Usage}
 
-In your document's preamble, type \verb+\usepackage{marvosym}+. To insert a
+In your document's preamble, include \verb+\usepackage{marvosym}+. To insert a
 symbol, use a macro as described in the next section. The symbol will appear
 in the currently selected font size. To get a bigger symbol, use a
 size-changing command like \\
@@ -633,10 +631,22 @@ The macros and this documentation were written by Thomas Henlich,
 who also converted the font to a Type 1 font. The latter involved running
 \path{ttf2pt1} and doing some manual fixes afterwards.
 
+Mojca Miklavec added the original TrueType font to the package and
+updated Type~1 and TFM font to reflect recent changes from original
+font; Mojca is the new maintainer of the \TeX\ support.
+
 \section{History}
 \begin{sloppypar}
 \begin{labeling}{9999-99-99}
-\item[2011-07-20] Version 2.2: (a long list)
+\item[2011-08-09] Version 2.2: Updated to font version 3.10
+(2008-09-01), added original TTF font, recreated Type 1 font files with
+some incompatible changes in font metrics, some glyphs removed and some
+newly introduced ones. Created TDS directory structure and made \LaTeX\
+macros 100 \% compatible with original names. Old \LaTeX\ names were kept as
+synonyms. AFM file now contains proper glyph names instead of names of
+ASCII characters on those slots.  Characters `A' and `p' (positions 0xF0
+and 0xF1) are no longer present, as they are not in the original font.
+Some high school logos were removed or replaced.
 \item[2006-05-11] Version 2.1: Renamed Rightarrow macro to MVRightarrow. New TeX name for font (umvs). Rewrote style file. Added fd file.
 \item[2000-04-21] Updated the font and documentation. Changed /FontName to
 MarVoSym. Many new glyphs.
@@ -660,9 +670,3 @@ Removed:
 
 
 \end{document}
-
-%%% Local Varibles: 
-%%% mode: latex
-%%% TeX-master: t
-%%% End: 
-
