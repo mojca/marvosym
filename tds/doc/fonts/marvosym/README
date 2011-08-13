@@ -1,64 +1,69 @@
-The Martin Vogels Symbole (marvosym) font is a Type 1 font.
-The marvosym style file lets you use this font in LaTeX2e documents.
+MarVoSym is Martin Vogel's Symbols font.  It contains many useful
+symbols, especially for office and civil engineering purposes.
 
-The font contains
-- the Euro currency symbol as defined by the European commission
-- Euro currency symbols in typefaces Times, Helvetica and Courier
-- Symbols fur structural engineering
-- Symbols for steel cross-sections
-- Astronomy signs (Sun, Moon, planets)
-- The 12 signs of the zodiac
-- Scissor symbols
-- a CE sign
-and many others.
+This marvosym package contains additional support files for TeX; any
+questions or comments about it should go to its current maintainer,
+not Martin.
+
+Original TrueType font creator: Martin Vogel
+Type 1 derivative, TeX macros, documentation:
+    Thomas Henlich (original package)
+    Mojca Miklavec (updates; current maintainer)
+
+With special thanks to:
+    Karl Berry (many useful comments)
+
+Contact info, urls: see OFL.txt.
+
+Licensing: fonts under OFL; TeX support files under LPPL.  And one other
+special case:
+  The marvosym.pdf file comes from Martin's original marvosym.zip
+  distribution, with this applicable license statement:
+    "The Archive MARVOSYM.ZIP is freely distributable."
+  Unfortunately this does not permit modification; also, its source is
+  not available.  We have been unable to contact Martin to discuss it.
+  Therefore marvosym.pdf is available on CTAN, but not in free/libre
+  distributions such as TeX Live.
+
+Installation: for TeX, your TeX distribution should already provide the
+package.  If you need to install it yourself, you can download it from
+CTAN (http://ctan.org/pkg/marvosym) and then see
+http://tug.org/fonts/fontinstall.html.
+
+To install for non-TeX (native) use on Windows, copy the .ttf
+into your system font directory or otherwise follow Windows procedures.
+
 
 File list:
 
 doc/
-	fonts/marvosym/
-		README                 Overview of what this package is
-
-		LICENSE                License for this package
-		marvodoc.tex           The source of the documentation
-		marvodoc.pdf           The documentation for the marvosym package
-		PROBLEMS               Describes some problems and their solutions
-		readme.original.txt    Readme from original font
+    fonts/marvosym/
+        README                      This file
+        marvodoc.tex                Documentation source
+        marvodoc.pdf                Formatted documentation
+        marvosym.pdf                Martin's original documentation
+                                    (not in free distributions, but on CTAN)
+        OFL.txt                     Licence
+        OFL-FAQ.txt                 Licence FAQ
 
 fonts/
-	afm/
-		public/marvosym/
-			marvosym.afm    Type 1 font metric file for the marvosym font
-	map/
-		dvips/marvosym/
-			marvosym.map    Map file for pdftex, dvips, ...
-		vtex/marvosym/
-			marvosym.ali    Map file for VTEX
-	tfm/
-		public/marvosym/
-			umvs.tfm        TeX font metric file for the marvosym font
-	truetype/
-		public/marvosym/
-			marvosym.ttf    Original TrueType font
-	type1/
-		public/marvosym/
-			marvosym.pfb    Type 1 font
+    afm/public/marvosym/
+        marvosym.afm                Adobe metric file for marvosym
+    map/dvips/marvosym/
+        marvosym.map                Map file for pdftex, dvips, ...
+    tfm/public/marvosym/
+        umvs.tfm                    TeX font metrics for marvosym.
+    truetype/public/marvosym/
+        marvosym.ttf                Original TrueType font
+    type1/ public/marvosym/
+        marvosym.pfb                Type 1 derivative
 
 source/
-	fonts/marvosym/
-		generate_marvosym_type1.sh    A shell script to generate afm, pfb and tfm files from ttf
+    fonts/marvosym/
+        generate_marvosym_type1.sh  Shell script to generate afm, pfb
+                                    and tfm files from ttf
 
 tex/
-	latex/marvosym/
-		marvosym.sty    The marvosym style file for LaTeX2e
-		umvs.fd         Font description file for the marvosym font
-		
-
-
-Font design: Martin Vogel
-Macros and documentation: Thomas Henlich (original package)
-                          Mojca Miklavec (updates; current maintainer)
-
-marvosym is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+    latex/marvosym/
+        marvosym.sty                The marvosym style file for LaTeX2e
+        umvs.fd                     L2E Font description file for marvosym
