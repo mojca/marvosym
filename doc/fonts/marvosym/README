@@ -39,6 +39,7 @@ File list:
 doc/
     fonts/marvosym/
         README                       This file
+        FONTLOG.txt                  Detailed information about font
         marvodoc.tex                 Documentation source
         marvodoc.pdf                 Formatted documentation
         marvosym.pdf                 Martin's original documentation
