@@ -1,11 +1,11 @@
 StartFontMetrics 4.1
 FontName MarVoSym
-FullName MarVoSym
-Notice Martin Vogel's Symbols are released under the Open Font License - look for information and new versions at http://www.marvosym.com - Neue Versionen und Informationen finden Sie auf http://www.marvosym.de
+FullName MarVoSym with TeX support
+Notice Martin Vogel's Symbols, including this derivative with TeX support, are released under the Open Font License - see http://ctan.org/pkg/marvosym
 EncodingScheme FontSpecific
-FamilyName MarVoSym
+FamilyName MarVoSym with TeX support
 Weight Regular
-Version Version 3.10 November 04, 2007
+Version TeX version of August 2011, based on original Version 3.10 November 04, 2007
 Characters 215
 ItalicAngle 0.0
 Ascender 925
