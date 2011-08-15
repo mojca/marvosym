@@ -12,10 +12,16 @@ symbols, especially for office and civil engineering purposes.
 
 This marvosym package contains additional support files for TeX.
 
-TODO: More specifically, this release supports the following Unicode ranges...
-This release contains...
-Documentation can be found at...
-To contribute to the project...
+
+Note: This is not a Unicode-compliant font. Characters that could have been
+mapped to Unicode slots (like Zodiac) are all in ASCII range or under 256.
+
+Documentation is included in package that can be downloaded from
+    http://ctan.org/pkg/marvosym
+If you want to contribute to the project, write to the maintainer or to
+the tex-live mailing list:
+    tex-live at tug dot org
+    http://tug.org/mailman/listinfo/tex-live
 
 
 ChangeLog
@@ -117,7 +123,4 @@ N: Karl Berry
 E: karl at freefriends dot org
 D: Many suggestion and improvements of Mojca's work
 
-marvosym.com is ...
-ctan.org is ...
-tug.org is ...
 -----
