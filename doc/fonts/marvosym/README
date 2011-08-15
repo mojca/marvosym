@@ -16,14 +16,6 @@ With special thanks to:
 Contact info, urls: see OFL.txt.
 
 Licensing: fonts under OFL; TeX support files under LPPL.
-And one other special case:
-  The marvosym.pdf file comes from Martin's original marvosym.zip
-  distribution, with this applicable license statement:
-    "The Archive MARVOSYM.ZIP is freely distributable."
-  Unfortunately this does not permit modification; also, its source is
-  not available.  We have been unable to contact Martin to discuss it.
-  Therefore marvosym.pdf is available on CTAN, but not in free/libre
-  distributions such as TeX Live.
 
 Installation: for TeX, your TeX distribution should already provide the
 package.  If you need to install it yourself, you can download it from
@@ -42,8 +34,6 @@ doc/
         FONTLOG.txt                  Detailed information about font
         marvodoc.tex                 Documentation source
         marvodoc.pdf                 Formatted documentation
-        marvosym.pdf                 Martin's original documentation
-                                     (not in free distributions, but on CTAN)
         OFL.txt                      Licence
         OFL-FAQ.txt                  Licence FAQ
 
