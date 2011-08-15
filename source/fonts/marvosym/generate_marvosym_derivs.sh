@@ -23,7 +23,6 @@ check_for_success()
 
 run_command()
 {
-	echo
 	echo ">>> running: '$1'"
 	$1
 	check_for_success $?
@@ -46,13 +45,22 @@ run_command   "ttf2pt1 -b $mvs.ttf"
 run_command   "mv $mvs.afm $fileA"
 run_command   "mv $mvs.pfb $fileB"
 
-write_comment "patch comments in afm and pfb"
+write_comment "patch comments in afm"
 echo "\$\$ sed -i \"\" -f $patchA $fileA"
 sed -i "" -f $patchA $fileA
 check_for_success $?
-echo "\$\$ sed -i \"\" -f $patchB $fileB"
-sed -i "" -f $patchB $fileB
+
+write_comment "patch comments in pfb"
+run_command   "cd $TDS/fonts/type1/public/$mvs"
+write_comment "create ascii version of the font first (disassemble)"
+run_command   "t1disasm $mvs.pfb $mvs.pfb.txt"
+write_comment "apply a patch to that one"
+echo "\$\$ sed -i \"\" -f $patchB $fileB.txt"
+sed -i "" -f $patchB $fileB.txt
 check_for_success $?
+write_comment "convert the font back into binary"
+run_command   "t1asm $mvs.pfb.txt $mvs.pfb"
+run_command   "rm $mvs.pfb.txt"
 
 write_comment "create tex metrics"
 run_command   "cd $TDS/fonts/afm/public/marvosym"
