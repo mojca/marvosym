@@ -15,8 +15,8 @@ With special thanks to:
 
 Contact info, urls: see OFL.txt.
 
-Licensing: fonts under OFL; TeX support files under LPPL.  And one other
-special case:
+Licensing: fonts under OFL; TeX support files under LPPL.
+And one other special case:
   The marvosym.pdf file comes from Martin's original marvosym.zip
   distribution, with this applicable license statement:
     "The Archive MARVOSYM.ZIP is freely distributable."
@@ -38,32 +38,34 @@ File list:
 
 doc/
     fonts/marvosym/
-        README                      This file
-        marvodoc.tex                Documentation source
-        marvodoc.pdf                Formatted documentation
-        marvosym.pdf                Martin's original documentation
-                                    (not in free distributions, but on CTAN)
-        OFL.txt                     Licence
-        OFL-FAQ.txt                 Licence FAQ
+        README                       This file
+        marvodoc.tex                 Documentation source
+        marvodoc.pdf                 Formatted documentation
+        marvosym.pdf                 Martin's original documentation
+                                     (not in free distributions, but on CTAN)
+        OFL.txt                      Licence
+        OFL-FAQ.txt                  Licence FAQ
 
 fonts/
     afm/public/marvosym/
-        marvosym.afm                Adobe metric file for marvosym
+        marvosym.afm                 Adobe metric file for marvosym
     map/dvips/marvosym/
-        marvosym.map                Map file for pdftex, dvips, ...
+        marvosym.map                 Map file for pdftex, dvips, ...
     tfm/public/marvosym/
-        umvs.tfm                    TeX font metrics for marvosym.
+        umvs.tfm                     TeX font metrics for marvosym.
     truetype/public/marvosym/
-        marvosym.ttf                Original TrueType font
+        marvosym.ttf                 Original TrueType font
     type1/ public/marvosym/
-        marvosym.pfb                Type 1 derivative
+        marvosym.pfb                 Type 1 derivative
 
 source/
     fonts/marvosym/
-        generate_marvosym_type1.sh  Shell script to generate afm, pfb
-                                    and tfm files from ttf
+        generate_marvosym_derivs.sh  Shell script to generate afm, pfb
+                                     and tfm files from ttf
+        patch_marvosym_afm.sed       Patch for font description in afm file
+        patch_marvosym_pfb.sed       Patch for font description in pfb file
 
 tex/
     latex/marvosym/
-        marvosym.sty                The marvosym style file for LaTeX2e
-        umvs.fd                     L2E Font description file for marvosym
+        marvosym.sty                 The marvosym style file for LaTeX2e
+        umvs.fd                      L2E Font description file for marvosym
