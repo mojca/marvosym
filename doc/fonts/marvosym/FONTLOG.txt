@@ -88,6 +88,11 @@ This is a list of tools used for conversions of ttf into TeX-friendly formats:
   distributed with TeX Live (http://www.tug.org/texlive/)
   authors: Tomas Rokicki
 
+- t1asm, t1disasm
+  assemble and disassemble PostScript Type 1 fonts
+  version: 1.36
+  http://www.lcdf.org/type/
+  authors: I. Lee Hetherington, Eddie Kohler et al.
 
 
 Acknowledgements
