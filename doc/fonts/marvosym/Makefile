@@ -15,6 +15,6 @@ clean:
 	-$(RM) $(DOC).log $(DOC).aux $(DOC).out $(SYM).log $(SYM).aux $(SYM).out
 
 allclean: clean
-	-$(RM) $(DOC).pdf $(SYM).pdf
+	-$(RM) $(DOC).pdf $(SYM).pdf marvosym-table.tex
 
 .PHONY: all clean allclean
