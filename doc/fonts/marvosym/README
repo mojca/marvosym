@@ -12,6 +12,7 @@ Type 1 derivative, TeX macros, documentation:
 
 With special thanks to:
     Karl Berry (many useful comments)
+    Heiko Oberdiek (created symbol list)
 
 Contact info, urls: see OFL.txt.
 
@@ -32,8 +33,11 @@ doc/
     fonts/marvosym/
         README                       This file
         FONTLOG.txt                  Detailed information about font
+        Makefile                     Makefile
         marvodoc.tex                 Documentation source
         marvodoc.pdf                 Formatted documentation
+        marvosym-doc.tex             Symbol list (source)
+        marvosym-doc.pdf             Symbol list (reproduction of original documentation)
         OFL.txt                      Licence
         OFL-FAQ.txt                  Licence FAQ
 
