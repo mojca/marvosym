@@ -227,7 +227,7 @@ C 208 ; WX 914 ; N SerialPort ; B 19 -3 895 356 ;
 C 209 ; WX 914 ; N ParallelPort ; B 20 -3 895 356 ;
 C 210 ; WX 914 ; N Printer ; B 19 -1 896 632 ;
 C 211 ; WX 1359 ; N AtNinetyFive ; B 3 -1 1353 623 ;
-C 212 ; WX 1359 ; N ShortNinetyFive ; B 3 -157 1353 623 ;
+C 212 ; WX 1359 ; N ShortNinetyfive ; B 3 -157 1353 623 ;
 C 213 ; WX 1352 ; N AtSixty ; B 3 -1 1352 623 ;
 C 214 ; WX 1359 ; N ShortSixty ; B 3 -157 1352 623 ;
 C 215 ; WX 1359 ; N ShortFifty ; B 3 -157 1352 623 ;

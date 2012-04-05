@@ -26,9 +26,8 @@ the tex-live mailing list:
 
 ChangeLog
 
-2012-04-05 (Heiko Oberdiek, Mojca Miklavec) MarVoSym font with TeX support Version 2.2a
+2012-04-06 (Heiko Oberdiek, Mojca Miklavec) MarVoSym font with TeX support Version 2.2a
 - Added PDF with glyph tables (reproduction of Martin's PDF document in TeX).
-- Renamed 'ShortNinetyfive' -> 'ShortNinetyFive' in Type1 font.
 - Replaced \EMail by \Email and \CheckedBox by \Checkedbox
   due to name clashes with other LaTeX packages.
 
@@ -127,7 +126,7 @@ D: Brought Thomas' package up-to-date (August 2011), docs reorganization
 
 N: Heiko Oberdiek
 E: heiko dot oberdiek at googlemail dot com
-D: Documentation (glyph tables) written in TeX, fixed naming bug (April 2012).
+D: Documentation (glyph tables) written in TeX.
 
 N: Karl Berry
 E: karl at freefriends dot org
